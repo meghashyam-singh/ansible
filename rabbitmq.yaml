@@ -38,4 +38,12 @@
    - name: print port
      ansible.builtin.debug:
        msg: "{{ rabbitmqport }}"
+
+   - name: check rabbitmq user
+     ansible.builtin.command: cat /etc/passwd
+     register: user
+
+   - name: print port
+     ansible.builtin.debug:
+       msg: "{{ user }}"
           
