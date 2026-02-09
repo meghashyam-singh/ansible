@@ -24,4 +24,4 @@
 
    - name: print mysql port
      ansible.builtin.debug:
-       msg: "{{ sql }}""
+       msg: "{{ sql }}"
