@@ -20,8 +20,8 @@
 
    - name: check port
      ansible.builtin.command: netstat -lntp
-     register: sql-port
+     register: sqlport
 
    - name: print mysql port
      ansible.builtin.debug:
-       msg: "{{ sql-port }}"
+       msg: "{{ sql }}"
