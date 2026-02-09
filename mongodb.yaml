@@ -29,9 +29,9 @@
    - name: restart mongodb
      ansible.builtin.service:
        name: mongod
-       start: restarted
+       state: restarted
+       enabled: yes
        
-
    - name: check mongodb port
      ansible.builtin.command: netstat -lntp
      register: mongodbport
