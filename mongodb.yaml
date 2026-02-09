@@ -27,8 +27,9 @@
        replace: '0.0.0.0'
 
    - name: restart mongodb
-     ansible.builtin.service:
+     ansible.builtin.systemd_service:
        name: mongod
+       daemon-reload: true
        start: restarted
        enabled: yes
 
